@@ -1,4 +1,4 @@
-import {FC, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css';
 import Clock from './common/Clock';
@@ -15,6 +15,7 @@ import {Immutable} from "./utils/Types";
 import AppTitle from "./AppTitle";
 import SearchBar from "./search/SearchBar";
 import Toggle from './common/Toggle';
+import Fetcher from './utils/Fetcher';
 
 type AppState = Immutable<
   {
@@ -28,17 +29,17 @@ type AppState = Immutable<
 }>;
 
 const App: FC<{}> = () => {
-  const [state] = useState<AppState>({isLoading: true});
-  // useEffect(() => {
-  //   Promise.all([
-  //     Fetcher.GET<User>('/app/v1/user'),
-  //     Fetcher.GET<Version>('/app/v1/version')
-  //   ]).then(([user, version]) => {
-  //     setState({isLoading: false, user, version, language: user.language});
-  //   }).catch(() => {
-  //     setState({isLoading: true});
-  //   });
-  // }, []);
+  const [state, setState] = useState<AppState>({isLoading: true});
+  useEffect(() => {
+    Promise.all([
+      Fetcher.GET<User>('/app/v1/user'),
+      Fetcher.GET<Version>('/app/v1/version')
+    ]).then(([user, version]) => {
+      setState({isLoading: false, user, version, language: user.language});
+    }).catch(() => {
+      setState({isLoading: true});
+    });
+  }, []);
   if (state.isLoading) {
     return null;
   }
