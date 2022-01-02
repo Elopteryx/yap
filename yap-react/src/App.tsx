@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {FC, useState} from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css';
 import Clock from './common/Clock';
@@ -8,7 +8,6 @@ import {withLoading} from './hoc/Loader';
 import IndexPage from './common/IndexPage';
 import ItemPage from './common/ItemPage';
 import LocalizationContext, {Language} from './LocalizationContext';
-import Fetcher from "./utils/Fetcher";
 import BalanceDisplay from "./common/BalanceDisplay";
 import UserContext, {User} from "./UserContext";
 import VersionContext, {Version} from "./VersionContext";
@@ -28,8 +27,8 @@ type AppState = Immutable<
     language: Language;
 }>;
 
-const App: React.FunctionComponent<{}> = () => {
-  const [state, setState] = useState<AppState>({isLoading: true});
+const App: FC<{}> = () => {
+  const [state] = useState<AppState>({isLoading: true});
   // useEffect(() => {
   //   Promise.all([
   //     Fetcher.GET<User>('/app/v1/user'),
