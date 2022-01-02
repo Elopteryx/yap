@@ -1,0 +1,25 @@
+## editors
+/.idea
+/.vscode
+
+## system files
+.DS_Store
+
+## npm
+yap-lit/package-lock.json
+yap-lit/node_modules/
+yap-lit/npm-debug.log
+yap-react/package-lock.json
+yap-react/node_modules/
+yap-react/npm-debug.log
+
+## testing
+yap-lit/coverage/
+yap-react/coverage/
+
+# build
+yap-lit/out-tsc/
+yap-react/_site/
+yap-react/dist/
+
+yap-lit/custom-elements.json

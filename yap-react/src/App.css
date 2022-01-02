@@ -1,0 +1,107 @@
+body {
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+.App {
+  overflow: hidden;
+  background-color: var(--color-background);
+
+
+  margin: 10px;
+  text-align: center;
+  min-height: 100vh;
+  color: #adbac7;
+  overflow: hidden;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 10s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #2d333b;
+  min-height: 10vh;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  box-shadow: 0 1px 0 rgba(12,13,14,0.15);
+}
+
+.App-header-left {
+  width: 350px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.App-header-left-link {
+  color: #adbac7;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.App-search {
+  background-color: #22272e;
+  border-radius: 0.8rem;
+  width: 500px;
+  height: 40px;
+}
+
+.App-search > input {
+  background-color: #22272e;
+  color: #adbac7;
+  width: inherit;
+  height: inherit;
+  border-radius: 0.8rem;
+  border-left-color: #adbac7;
+  border-top-color: #adbac7;
+  outline: none;
+}
+
+.App-header-right {
+  width: 30vw;
+  text-align: right;
+}
+
+.App-link {
+  height: 100px;
+  line-height: 100px;
+  color: #adbac7;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.App-link:hover {
+  color: #22272e;
+}
+
+.App-link-active {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Page {
+  height: 80vh;
+}
+
+.Content {
+  background-color: var(--color-background-content);
+  margin: 10px;
+  border: 0.05rem solid #111111;
+  border-radius: 0.8rem;
+  font-size: 3rem;
+  height: calc(80vh - 50px);
+  line-height: calc(80vh - 100px);
+}

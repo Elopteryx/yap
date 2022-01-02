@@ -1,0 +1,25 @@
+.MenuBar {
+    display: flex;
+    height: 10vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+}
+
+.MenuItem {
+    display: flex;
+    width: calc((100% - 240px) / 9);
+    flex-direction: column;
+    justify-content: center;
+    border: 0.05rem solid #111111;
+    border-radius: 0.8rem;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.MenuItem:hover {
+    background-color: #DDDDDD;
+    color: #22272e;
+}
