@@ -3,12 +3,30 @@ name: Yap CI
 on: [push]
 
 jobs:
+
+  build-lit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 17
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17.x
+      - name: npm install, test, and build
+        working-directory: ./yap-lit
+        run: |
+          npm i
+          npm run test
+          npm run build
+        env:
+          CI: true
+
   build-react:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js 17
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 17.x
       - name: npm install, test, and build
@@ -20,19 +38,18 @@ jobs:
         env:
           CI: true
 
-  build-lit:
+  build-vue:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Use Node.js 17
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 17.x
       - name: npm install, test, and build
-        working-directory: ./yap-lit
+        working-directory: ./yap-vue
         run: |
           npm i
-          npm run test
           npm run build
         env:
           CI: true

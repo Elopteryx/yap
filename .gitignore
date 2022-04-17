@@ -25,5 +25,6 @@ yap-vue/coverage/
 yap-lit/out-tsc/
 yap-react/_site/
 yap-react/build/
+yap-react/dist/
 
 yap-lit/custom-elements.json
