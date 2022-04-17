@@ -3,7 +3,7 @@ Yet-Another-Portfolio
 
 [![Actions Status](https://github.com/Elopteryx/yap/workflows/Yap%20CI/badge.svg)](https://github.com/Elopteryx/yap/actions)
 
-Experimental project for trying out the latest features of web development, using TypeScript, React and Lit (for WebComponents).
+Experimental project for trying out the latest features of web development, using TypeScript, Lit (for WebComponents), React and Vue.
 
 The repository contains two modules, one for each framework.
 
