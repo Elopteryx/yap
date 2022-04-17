@@ -8,6 +8,12 @@ export class Skills extends Page {
       width: 70vw;
     }
 
+    .filter {
+      width: 180px;
+      height: 30px;
+      border-radius: 1em;
+    }
+
     ul {
       text-align: left;
       font-size: calc(10px + 1vmin);

@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from 'react';
 import {Language} from "./LocalizationContext";
 
 export type User = {
@@ -7,7 +7,7 @@ export type User = {
     language: Language;
 };
 
-const UserContext = React.createContext<User>({
+const UserContext = createContext<User>({
     name: 'Anonymous',
     balance: 0,
     language: 'en',

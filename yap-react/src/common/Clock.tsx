@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import Format from '../utils/Format';
+import { useState } from 'react';
+import * as React from 'react';
+import { formatCurrentTime } from '../utils/formatters';
 import './Clock.css';
 
 const Clock: React.FunctionComponent<{}> = () => {
     const [time, setTime] = useState(() => {
         window.setInterval(() => {
-            setTime(Format.currentTime());
+            setTime(formatCurrentTime());
         }, 1000);
-        return Format.currentTime();
+        return formatCurrentTime();
     });
     return (
         <div className="Clock">

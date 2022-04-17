@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 
-const SearchBar: React.FunctionComponent<{}> = () => {
+const SearchBar: FC<{}> = () => {
     return (
         <div className="App-search">
             <input type="text" placeholder="Search..."/>

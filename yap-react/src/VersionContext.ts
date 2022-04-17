@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from 'react';
 
 export type Version = {
     value: string;
@@ -7,7 +7,7 @@ export type Version = {
     patch: number;
 };
 
-const VersionContext = React.createContext<Version>({
+const VersionContext = createContext<Version>({
     value: '1.0.0',
     major: 1,
     minor: 0,

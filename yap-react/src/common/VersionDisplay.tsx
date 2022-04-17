@@ -1,11 +1,11 @@
-import * as React from 'react';
+import { FC, memo } from 'react';
 import './VersionDisplay.css';
 import VersionContext from "../VersionContext";
 import {useContext} from "react";
 
 type VersionDisplayProps = {};
 
-const VersionDisplay: React.FunctionComponent<VersionDisplayProps> = () => {
+const VersionDisplay: FC<VersionDisplayProps> = () => {
     const version = useContext(VersionContext);
 
     return (
@@ -13,4 +13,4 @@ const VersionDisplay: React.FunctionComponent<VersionDisplayProps> = () => {
     );
 };
 
-export default React.memo(VersionDisplay);
+export default memo(VersionDisplay);

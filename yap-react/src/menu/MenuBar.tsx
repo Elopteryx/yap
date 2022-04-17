@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { FC, memo } from 'react';
 import './MenuBar.css';
 import MenuItem from './MenuItem';
 
 type MenuBarProps = {};
 
-const MenuBar: React.FunctionComponent<MenuBarProps> = () => {
+const MenuBar: FC<MenuBarProps> = () => {
     return (
         <div className="MenuBar">
             <MenuItem name="Motherboard"/>
@@ -20,4 +20,4 @@ const MenuBar: React.FunctionComponent<MenuBarProps> = () => {
     );
 };
 
-export default React.memo(MenuBar);
+export default memo(MenuBar);

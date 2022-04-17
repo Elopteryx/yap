@@ -1,11 +1,11 @@
-import * as React from 'react';
+import { FC, memo } from 'react';
 import './BalanceDisplay.css';
 import {useContext} from "react";
 import UserContext from "../UserContext";
 
 type BalanceDisplayProps = {};
 
-const BalanceDisplay: React.FunctionComponent<BalanceDisplayProps> = () => {
+const BalanceDisplay: FC<BalanceDisplayProps> = () => {
     const user = useContext(UserContext);
 
     return (
@@ -13,4 +13,4 @@ const BalanceDisplay: React.FunctionComponent<BalanceDisplayProps> = () => {
     );
 };
 
-export default React.memo(BalanceDisplay);
+export default memo(BalanceDisplay);

@@ -1,9 +1,9 @@
-import * as React from 'react';
+import { FC, memo } from 'react';
 import MenuBar from '../menu/MenuBar';
 
 type IndexPageProps = {};
 
-const IndexPage: React.FunctionComponent<IndexPageProps> = () => {
+const IndexPage: FC<IndexPageProps> = () => {
     return (
         <div className="Page">
             <MenuBar/>
@@ -14,4 +14,4 @@ const IndexPage: React.FunctionComponent<IndexPageProps> = () => {
     );
 };
 
-export default React.memo(IndexPage);
+export default memo(IndexPage);

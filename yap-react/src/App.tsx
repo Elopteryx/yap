@@ -37,7 +37,7 @@ const App: FC<{}> = () => {
     ]).then(([user, version]) => {
       setState({isLoading: false, user, version, language: user.language});
     }).catch(() => {
-      setState({isLoading: true});
+      setState({isLoading: false, user: { name: "Anonymous", balance: 0, language: "en"}, version: { value: "0.1.0", major: 0, minor: 1, patch: 0}, language: "en"});
     });
   }, []);
   if (state.isLoading) {

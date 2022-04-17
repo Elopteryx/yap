@@ -1,11 +1,11 @@
-import * as React from 'react';
+import { FC, memo } from 'react';
 import './UserInfo.css';
 import {useContext} from "react";
 import UserContext from "../UserContext";
 
 type UserInfoProps = {};
 
-const UserInfo: React.FunctionComponent<UserInfoProps> = () => {
+const UserInfo: FC<UserInfoProps> = () => {
     const user = useContext(UserContext);
 
     return (
@@ -13,4 +13,4 @@ const UserInfo: React.FunctionComponent<UserInfoProps> = () => {
     )
 };
 
-export default React.memo(UserInfo);
+export default memo(UserInfo);

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { FC, memo } from 'react';
 import { NavLink } from 'react-router-dom';
 import LocalizedText from '../l10n/LocalizedText';
 
@@ -6,7 +6,7 @@ type MenuItemProps = {
     name: string;
 };
 
-const MenuItem: React.FunctionComponent<MenuItemProps> = (props) => {
+const MenuItem: FC<MenuItemProps> = (props) => {
     const {name} = props;
     return (
         <div className="MenuItem">
@@ -17,4 +17,4 @@ const MenuItem: React.FunctionComponent<MenuItemProps> = (props) => {
     );
 };
 
-export default React.memo(MenuItem);
+export default memo(MenuItem);

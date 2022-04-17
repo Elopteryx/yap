@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { FC, memo } from 'react';
 import {useLocation} from 'react-router';
 import MenuBar from '../menu/MenuBar';
 
 type ItemPageProps = {};
 
-const ItemPage: React.FunctionComponent<ItemPageProps> = () => {
+const ItemPage: FC<ItemPageProps> = () => {
     const location = useLocation();
     return (
         <div className="Page">
@@ -16,4 +16,4 @@ const ItemPage: React.FunctionComponent<ItemPageProps> = () => {
     );
 };
 
-export default React.memo(ItemPage);
+export default memo(ItemPage);

@@ -12,14 +12,18 @@ yap-lit/npm-debug.log
 yap-react/package-lock.json
 yap-react/node_modules/
 yap-react/npm-debug.log
+yap-vue/package-lock.json
+yap-vue/node_modules/
+yap-vue/npm-debug.log
 
 ## testing
 yap-lit/coverage/
 yap-react/coverage/
+yap-vue/coverage/
 
 # build
 yap-lit/out-tsc/
 yap-react/_site/
-yap-react/dist/
+yap-react/build/
 
 yap-lit/custom-elements.json

@@ -9,7 +9,7 @@ const Toggle: React.FunctionComponent<ToggleProps> = () => {
         document.documentElement.setAttribute("data-color-mode", mode);
     }
     return (
-        <div>
+        <div className="toggle-container">
             <input type="checkbox" id="toggle" onChange={onChange}/>
             <label htmlFor="toggle"></label>
         </div>

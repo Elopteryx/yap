@@ -1,14 +1,13 @@
-import * as React from 'react';
+import { FC, memo, useContext } from 'react';
 import enData from './data/en.json';
 import deData from './data/de.json';
 import LocalizationContext from '../LocalizationContext';
-import {useContext} from "react";
 
 type LocalizedProps = {
     l10nKey: string;
 };
 
-const LocalizedText: React.FunctionComponent<LocalizedProps> = (props) => {
+const LocalizedText: FC<LocalizedProps> = (props) => {
     const language = useContext(LocalizationContext);
     const {l10nKey} = props;
     let value;
@@ -29,4 +28,4 @@ const LocalizedText: React.FunctionComponent<LocalizedProps> = (props) => {
     );
 };
 
-export default React.memo(LocalizedText);
+export default memo(LocalizedText);

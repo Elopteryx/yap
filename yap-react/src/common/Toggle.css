@@ -1,4 +1,4 @@
-*, *:after, *:before {
+.toggle-container * {
 	box-sizing: border-box;
 }
 
@@ -9,21 +9,29 @@ body {
 	justify-content: center;
 }
 
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 input[type=checkbox] {
     visibility: hidden;
+    width: 0;
+    height: 0;
   }
   input[type=checkbox]:checked + label {
     background-color: #000;
   }
   input[type=checkbox]:checked + label:before {
-    transform: translateX(90px);
+    transform: translateX(45px);
     background-color: #FFF;
   }
   
   label {
     display: flex;
-    width: 180px;
-    height: 90px;
+    width: 90px;
+    height: 45px;
     border: 6px solid;
     border-radius: 99em;
     position: relative;
@@ -36,10 +44,10 @@ input[type=checkbox] {
     content: "";
     display: block;
     position: absolute;
-    width: 54px;
-    height: 54px;
+    width: 27px;
+    height: 27px;
     background-color: #000;
     border-radius: 50%;
-    top: 12px;
-    left: 12px;
+    top: 3px;
+    left: 3px;
   }
